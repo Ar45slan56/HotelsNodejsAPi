@@ -37,65 +37,65 @@ app.get('/', (req, res) => {
 app.use('/person', personRoutes);
 app.use('/menu', menuRoutes);
 
-// Uncomment these routes if needed
-// app.get('/chicken', (req, res) => {
-//     res.send(`
-//         <html>
-//             <head>
-//                 <title>Chicken Served</title>
-//             </head>
-//             <body>
-//                 <h1>Sure Sir</h1>
-//                 <p>I served chicken in 10 seconds...</p>
-//                 <h2 id="counter"></h2>
-//                 <h2 id="demo"></h2>
-//                 <script>
-//                     let counter = 10;
-//                     function updateCounter() {
-//                         document.getElementById("counter").innerHTML = 'Counter is: ' + counter;
-//                         if (counter === 0) {
-//                             clearInterval(interval);
-//                             document.getElementById("demo").innerHTML = "Your chicken is ready!";
-//                         }
-//                         counter--;
-//                     }
-//                     let interval = setInterval(updateCounter, 1000);
-//                 </script>
-//             </body>
-//         </html>
-//     `);
-// });
 
-// app.get('/blog', (req, res) => {
-//     res.send(`
-//         <html>
-//             <head>
-//                 <style>
-//                 #farhan {
-//                     color: red;
-//                     font-size: 50px;
-//                 }
-//                 </style>
-//             </head>
-//             <body>
-//                 <div id='farhan'><b>farhan hi</b></div>
-//             </body>
-//         </html>
-//     `);    
-// });
+app.get('/chicken', (req, res) => {
+    res.send(`
+        <html>
+            <head>
+                <title>Chicken Served</title>
+            </head>
+            <body>
+                <h1>Sure Sir</h1>
+                <p>I served chicken in 10 seconds...</p>
+                <h2 id="counter"></h2>
+                <h2 id="demo"></h2>
+                <script>
+                    let counter = 10;
+                    function updateCounter() {
+                        document.getElementById("counter").innerHTML = 'Counter is: ' + counter;
+                        if (counter === 0) {
+                            clearInterval(interval);
+                            document.getElementById("demo").innerHTML = "Your chicken is ready!";
+                        }
+                        counter--;
+                    }
+                    let interval = setInterval(updateCounter, 1000);
+                </script>
+            </body>
+        </html>
+    `);
+});
 
-// app.get('/api', (req, res) => {
-//     let customPentest = {
-//         testApp: "true",
-//         appName: "sololearn",
-//         testing: "true"
-//     };
-//     res.json(customPentest);    
-// });
+app.get('/blog', (req, res) => {
+    res.send(`
+        <html>
+            <head>
+                <style>
+                #farhan {
+                    color: red;
+                    font-size: 50px;
+                }
+                </style>
+            </head>
+            <body>
+                <div id='farhan'><b>farhan hi</b></div>
+            </body>
+        </html>
+    `);    
+});
 
-// app.post('/items', (req, res) => {
-//     res.send("data is saved");    
-// });
+app.get('/api', (req, res) => {
+    let customPentest = {
+        testApp: "true",
+        appName: "sololearn",
+        testing: "true"
+    };
+    res.json(customPentest);    
+});
+
+app.post('/items', (req, res) => {
+    res.send("data is saved");    
+});
 
 app.listen(3000, () => {
     console.log("Listening on port: 3000");
